@@ -1,9 +1,10 @@
 const net = require('net');
+const { IP, PORT, NAME } = require('./constants');
 
 const connect = function() {
   const conn = net.createConnection({  
-    host: '192.168.1.73',
-    port: 50541
+    host: IP,
+    port: PORT
   });
 
   conn.on('connect', () => {
@@ -11,7 +12,7 @@ const connect = function() {
   });
 
   conn.setEncoding('utf8'); 
-  conn.write("Name: JLT");
+  conn.write(`Name: ${NAME}`);
   return conn;
 }
 
