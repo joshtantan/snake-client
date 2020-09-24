@@ -17,13 +17,13 @@ const connect = function() {
   conn.setEncoding('utf8'); 
   conn.write("Name: JLT");
 
-  setInterval(() => {
-    conn.write("Move: up");
-  }, 500);
+  // setInterval(() => {
+  //   conn.write("Move: up");
+  // }, 500);
 
-  setInterval(() => {
-    conn.write("Move: left");
-  }, 1000);
+  // setInterval(() => {
+  //   conn.write("Move: left");
+  // }, 1000);
 
   return conn;
 }

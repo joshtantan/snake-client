@@ -3,7 +3,7 @@ const {setupInput} = require('./input');
 console.log('Attempting connection to game server.');
 const client = connect();
 
-setupInput();
+setupInput(client);
 
 client.on('data', (data) => {
   console.log('Game Server: ', data);
