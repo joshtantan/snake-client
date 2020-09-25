@@ -1,9 +1,9 @@
-const { 
+const {
   MOVE_UP_KEY,
   MOVE_LEFT_KEY,
   MOVE_DOWN_KEY,
   MOVE_RIGHT_KEY,
-  CHAT_MACROS 
+  CHAT_MACROS
 } = require('./constants');
 
 let connection;
@@ -17,7 +17,7 @@ const setupInput = function(conn) {
   stdin.on('data', handleUserInput);
 
   return stdin;
-}
+};
 
 const handleUserInput = (key) => {
   if (key === '\u0003') {
